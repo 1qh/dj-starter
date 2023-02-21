@@ -1,0 +1,83 @@
+{% extends '_base.html' %} {% load i18n %} {% block full_title %}{{ PROJECT_NAME
+}}{% endblock full_title %} {% block content %}
+<section>
+  <div>{% include "includes/messages.html" %}</div>
+</section>
+<section>
+  <div>
+    <h1>{{ PROJECT_NAME }}</h1>
+  </div>
+</section>
+<section>
+  <div>
+    <h3>Pages</h3>
+    <table>
+      <thead>
+        <tr>
+          <td>Page</td>
+          <td>Detail</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a href="/admin/">admin</a></td>
+          <td>Django admin</td>
+        </tr>
+        <tr>
+          <td><a href="/accounts/signup/">accounts/signup</a></td>
+          <td>Sign up page</td>
+        </tr>
+        <tr>
+          <td><a href="/accounts/login/">accounts/login</a></td>
+          <td>Sign in page</td>
+        </tr>
+        <tr>
+          <td>
+            <a href="/accounts/password/reset">accounts/password/reset</a>
+          </td>
+          <td>Reset password</td>
+        </tr>
+        <tr>
+          <td><a href="/accounts/settings/">settings</a></td>
+          <td>Settings page</td>
+        </tr>
+        <tr>
+          <td><a href="/feedback/">feedback</a></td>
+          <td>Feedback form</td>
+        </tr>
+        <tr>
+          <td><a href="/silk/">silk</a></td>
+          <td>Silk profiling tool</td>
+        </tr>
+        <tr>
+          <td><a href="/api/redoc/">api/redoc</a></td>
+          <td>API docs</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+<section>
+  <div>
+    <h3>API endpoints</h3>
+    <table>
+      <thead>
+        <tr>
+          <td>Endpoint</td>
+          <td>Detail</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a href="/api/token-auth/">api/token-auth</a></td>
+          <td>Token authentication</td>
+        </tr>
+        <tr>
+          <td><a href="/api/protected/">api/protected</a></td>
+          <td>Example endpoint that requires token to be accessed</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+{% endblock content %}

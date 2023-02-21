@@ -1,0 +1,25 @@
+{% extends '_base.html' %} {% load i18n %} {% block title %}{% translate "Leave
+feedback" %}{% endblock %} {% block content %}
+<section>
+  <div>
+    <div>
+      <div>
+        <div>
+          <div>
+            <h1>{% translate "Leave feedback" %}</h1>
+          </div>
+          <div>
+            {% include "includes/messages.html" %}
+            <form method="post">
+              {% csrf_token %} {{ form }}
+              <div>
+                <button type="submit">{% translate "Submit" %}</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endblock content %}
+  </div>
+</section>
